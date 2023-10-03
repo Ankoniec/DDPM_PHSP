@@ -9,18 +9,18 @@ beta_scheduler_params:
   end: 0.01
 
 checkpoint_params:
-  dirpath: '/data2/etude/annkon/checkpoints/warmup10_1200/'
+  dirpath: ''
   filename: ddpm_{epoch:02d}_{train_loss:04f}
   every_n_epochs: 50
   save_last: true
   save_top_k: -1
 
 dataset_params:
-  data_path: '/data2/etude/annkon/data/'
+  data_path: ''
   filename: 'photons_XYTE_E5.6_s0.0_a1.5.npy'
   batch_size: 10000
 
 logger:
-  save_dir: '/data2/etude/annkon/checkpoints/warmup10_1200/logs/'
+  save_dir: ''
   name: 'warmup10'
   flush_logs_every_n_steps: 1000
