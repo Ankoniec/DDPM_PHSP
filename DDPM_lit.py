@@ -6,9 +6,9 @@ from pytorch_lightning.callbacks.model_checkpoint import ModelCheckpoint
 from pytorch_lightning.callbacks import LearningRateMonitor
 from pytorch_lightning import loggers as pl_loggers
 
-from model import ConditionalModel
-from diffusion import GaussianDiffusion, make_beta_schedule
-from data_helpers import PhotonsDataset
+from lib.model import ConditionalModel
+from lib.diffusion import GaussianDiffusion, make_beta_schedule
+from lib.data_helpers import PhotonsDataset
 
 
 
@@ -43,7 +43,7 @@ class DDPM_lit(pl.LightningModule):
 
 if __name__ == "__main__":
     
-    with open("ddpm_config.yaml", 'r') as file:
+    with open("config/ddpm_config.yaml", 'r') as file:
         config = yaml.safe_load(file)
 
     print(f"Number of GPUs available: {torch.cuda.device_count()}")
